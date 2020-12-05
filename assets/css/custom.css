@@ -1,0 +1,25 @@
+
+/* HEADER NAV BAR CSS */
+/*Use https://www.youtube.com/watch?v=TmmLRv9yY0M&feature=share for submenu support setup*/
+
+header .main-header-menu {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+
+header .main-header-menu li a {
+    padding:0 2rem;
+    color:#000000
+}
+
+/* remove padding on edge links*/
+header .main-header-menu li:first-child a {
+    padding-left:0;
+}
+header .main-header-menu li:last-child a {
+    padding-right:0;
+}
+
+
