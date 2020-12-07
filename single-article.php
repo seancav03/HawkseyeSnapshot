@@ -17,6 +17,7 @@
         </div>
     </div>
 </div>
+<br></br>
 <?php
 if (comments_open()){
   comments_template();

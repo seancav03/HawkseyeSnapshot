@@ -83,7 +83,8 @@ function hawkseye_comments($comment, $args, $depth) {
 				<span class="comment-reply"> <?php comment_reply_link(array_merge( $args, array('reply_text' => __('Reply', 'hawkseye'), 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment->comment_ID); ?></span>
 			</div>
 		</div>
-<?php }
+    <?php 
+}
 
 // Enqueue comment-reply
 add_action('wp_enqueue_scripts', 'hawkseye_public_scripts');
