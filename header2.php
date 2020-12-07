@@ -16,17 +16,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="d-flex justify-content-between align-items-center navbar-top">
                 <ul class="navbar-left">
-                    <?php
-                            wp_nav_menu(
-                                array(
-                                    'menu' => 'primary',
-                                    'menu_class' => 'main-header-menu-2',
-                                    'container' => '',
-                                    'container_class' => '',
-                                    'theme_location' => 'primary'
-                                )
-                            );
-                        ?>
+                    <li><?php echo date('l jS \of F Y');?></li>
                 </ul>
                 <div>
                     <a class="navbar-brand" href="<?php echo get_home_url();?>">
@@ -38,9 +28,6 @@
                             $WHratio = $logo[1]/$logo[2];
                         }
                         ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="mdi mdi-magnify"></i></a>
-                        </li>
                         <img src="<?php echo $logo[0] ?>" width="<?php echo ($height*$WHratio) ?>" height="<?php echo $height ?>" alt=""/>
                     </a>
                 </div>
@@ -85,7 +72,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- <div class="navbar-collapse justify-content-center collapse" 
+                <div class="navbar-collapse justify-content-center collapse" 
                 id="navbarSupportedContent">
                     <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
                         <li>
@@ -93,8 +80,56 @@
                             <i class="mdi mdi-close"></i>
                             </button>
                         </li>
+                        <!-- Dynamic Wordpress Header Menu -->
+                        <?php
+                            wp_nav_menu(
+                                array(
+                                    'menu' => 'primary',
+                                    'menu_class' => 'main-header-menu',
+                                    'container' => '',
+                                    'container_class' => '',
+                                    'theme_location' => 'primary'
+                                )
+                            );
+                        ?>
+
+                        <!-- Static Top -->
+                        <!-- <li class="nav-item active">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/world.html">World</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/author.html">Magazine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/news-post.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/business.html">Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sports.html">Sports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/art.html">Art</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/politics.html">Politics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/real-estate.html">Real estate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/travel.html">Travel</a>
+                        </li> -->
+                        <!-- Static Bottom -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="mdi mdi-magnify"></i></a>
+                        </li>
                     </ul>
-                </div> -->
+                </div>
                 </div>
             </nav>
 

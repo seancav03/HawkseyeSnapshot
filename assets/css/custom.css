@@ -22,4 +22,26 @@ header .main-header-menu li:last-child a {
     padding-right:0;
 }
 
+/* Second Header Options */
+
+nav .main-header-menu-2 {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+
+nav .main-header-menu-2 li a {
+    padding:0 2rem;
+    color:#000000
+}
+
+/* remove padding on edge links*/
+nav .main-header-menu-2 li:first-child a {
+    padding-left:0;
+}
+nav .main-header-menu-2 li:last-child a {
+    padding-right:0;
+}
+
 

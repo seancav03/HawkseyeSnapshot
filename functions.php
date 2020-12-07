@@ -7,6 +7,11 @@ function hawkseye_theme_support() {
 }
 add_action('after_setup_theme', 'hawkseye_theme_support');
 
+//shorten the auto-generated post excerpts
+add_filter( 'excerpt_length', function($length) {
+    return 18;
+} );
+
 function hawkseye_setup_menus() {
 
     $locations = array(
@@ -114,11 +119,13 @@ add_filter( 'register_post_type_args', 'hawkseye_block_templates', 20, 2);
 
 //Register Post Types with Block Templates
 function hawkseye_register_posts() {
+    //register a post type called "Article" and give default template
     $args = array(
         'public' => true,
+        'has_archive' => true,
         'label' => 'Article',
         'show_in_rest' => true,
-        'supports' => array('title','editor','author','excerpt','comments','revisions'),
+        'supports' => array('title','editor','author','excerpt','comments','revisions', 'thumbnail'),
         'template' => array(
             array( 'core/heading', array(
                 'placeholder' => 'Insert Date/Author',
