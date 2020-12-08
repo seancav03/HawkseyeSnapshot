@@ -44,4 +44,10 @@ header .main-header-menu-2 li:last-child a {
     padding-right:0;
 }
 
+/* Author Icon Sizing */
+.img-sm {
+    width: 30px;
+    height: 30px;
+}
+
 

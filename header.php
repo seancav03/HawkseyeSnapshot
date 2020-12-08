@@ -21,14 +21,10 @@
                 <div>
                     <a class="navbar-brand" href="<?php echo get_home_url();?>">
                         <?php
-                        if(function_exists('the_custom_logo')){
                             $custom_logo_id = get_theme_mod('custom_logo');
                             $logo = wp_get_attachment_image_src($custom_logo_id);
-                            $height = 100;
-                            $WHratio = $logo[1]/$logo[2];
-                        }
                         ?>
-                        <img src="<?php echo $logo[0] ?>" width="<?php echo ($height*$WHratio) ?>" height="<?php echo $height ?>" alt=""/>
+                        <img src="<?php echo $logo[0];?>" alt="" height="100" width="auto">
                     </a>
                 </div>
                 <div class="d-flex">
