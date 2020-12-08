@@ -9,7 +9,7 @@ add_action('after_setup_theme', 'hawkseye_theme_support');
 
 //shorten the auto-generated post excerpts
 add_filter( 'excerpt_length', function($length) {
-    return 18;
+    return 35;
 } );
 
 function hawkseye_setup_menus() {
@@ -128,13 +128,13 @@ function hawkseye_register_posts() {
         'show_in_rest' => true,
         'supports' => array('title','editor','author','excerpt','comments','revisions', 'thumbnail'),
         'template' => array(
-            array( 'core/heading', array(
-                'placeholder' => 'Insert Date/Author',
-                'align' => 'center'
-            ) ),
-            array( 'core/image', array(
-                'align' => 'center',
-            ) ),
+            // array( 'core/heading', array(
+            //     'placeholder' => 'Insert Date/Author',
+            //     'align' => 'center'
+            // ) ),
+            // array( 'core/image', array(
+            //     'align' => 'center',
+            // ) ),
             array( 'core/paragraph', array(
                 'placeholder' => 'Add Article Text...',
             ) ),

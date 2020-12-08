@@ -35,7 +35,7 @@
                         <i class="mdi mdi-calendar"></i> <?php echo get_the_date("F j, Y, g:i a");?> &nbsp; &nbsp; &nbsp; <i class="mdi mdi-message"></i> <?php comments_number();?>
                     </p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <?php if(has_post_thumbnail()): ?>
                         <div class="position-relative image-hover">
                             <a href="<?php the_permalink();?>">
