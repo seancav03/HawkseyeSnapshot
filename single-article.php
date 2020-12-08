@@ -1,5 +1,5 @@
 <?php get_header();?>
-<!-- QWERTY SINGLE-ARTICLE.PHP TEMPLATE QWERTY -->
+<!-- QWERTY SINGLE-ARTCILE.PHP TEMPLATE QWERTY -->
 
 <div class="container">
     <?php if( have_posts()): the_post(); ?>
@@ -29,12 +29,21 @@
                 </p>
               </h5>
               <div class="text-center">
-                <img
-                src="<?php echo the_post_thumbnail_url();?>"
-                class="img-sm mb-2"
-                style="width:80%;height:auto"
-                alt="A"
-                />
+                <?php if(has_post_thumbnail()): ?>
+                    <img
+                    src="<?php echo the_post_thumbnail_url();?>"
+                    class="img-sm mb-2"
+                    style="width:80%;height:auto"
+                    alt="A"
+                    />
+                <?php else: ?>
+                  <img
+                    src="<?php echo get_template_directory_uri()?>/assets/images/placeholder.jpeg"
+                    class="img-sm mb-2"
+                    style="width:80%;height:auto"
+                    alt="Error"
+                    />
+                <?php endif; ?>
               </div>
               <br></br>
               <?php the_content();?>
