@@ -36,13 +36,6 @@
                     style="width:80%;height:auto"
                     alt="A"
                     />
-                <?php else: ?>
-                  <img
-                    src="<?php echo get_template_directory_uri()?>/assets/images/placeholder.jpeg"
-                    class="img-sm mb-2"
-                    style="width:80%;height:auto"
-                    alt="Error"
-                    />
                 <?php endif; ?>
               </div>
               <br></br>
