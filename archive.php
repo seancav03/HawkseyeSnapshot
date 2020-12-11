@@ -12,13 +12,13 @@
             $the_query = new WP_Query($args);
             while( $the_query->have_posts() ) : $the_query->the_post();
           ?>
-          <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+          <div class="col-lg-4 col-sm-6 grid-margin mb-5 mb-sm-2">
           <?php if(has_post_thumbnail()): ?>
                 <div class="position-relative image-hover">
                   <a href="<?php the_permalink();?>">
                   <img
                   src="<?php echo the_post_thumbnail_url();?>"
-                  class="img-fluid"
+                  class="gridImg img-fluid"
                   alt="Add Thumbnail"
                   />
                   <span class="thumb-title">READ</span>
@@ -29,7 +29,7 @@
                   <a href="<?php the_permalink();?>">
                   <img
                   src="<?php echo get_template_directory_uri()?>/assets/images/placeholder.jpeg"
-                  class="img-fluid"
+                  class="gridImg img-fluid"
                   alt="Error"
                   />
                   <span class="thumb-title">READ</span>
