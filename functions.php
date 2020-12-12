@@ -60,11 +60,6 @@ function hawkseye_load_js() {
 add_action('wp_enqueue_scripts', 'hawkseye_load_js');
 
 
-
-
-
-
-
 //START CUSTOM COMMENTS SECTION
 // Custom Callback
 function hawkseye_comments($comment, $args, $depth) {
@@ -118,29 +113,29 @@ function hawkseye_block_templates( $args, $post_type) {
 }
 add_filter( 'register_post_type_args', 'hawkseye_block_templates', 20, 2);
 
-//Register Post Types with Block Templates
-function hawkseye_register_posts() {
-    //register a post type called "Article" and give default template
-    $args = array(
-        'public' => true,
-        'has_archive' => true,
-        'label' => 'Article',
-        'show_in_rest' => true,
-        'supports' => array('title','editor','author','excerpt','comments','revisions', 'thumbnail'),
-        'template' => array(
-            // array( 'core/heading', array(
-            //     'placeholder' => 'Insert Date/Author',
-            //     'align' => 'center'
-            // ) ),
-            // array( 'core/image', array(
-            //     'align' => 'center',
-            // ) ),
-            array( 'core/paragraph', array(
-                'placeholder' => 'Add Article Text...',
-            ) ),
-        )
-    );
-    register_post_type('article', $args);
-}
-add_action( 'init', 'hawkseye_register_posts');
+// //Register Post Types with Block Templates
+// function hawkseye_register_posts() {
+//     //register a post type called "Article" and give default template
+//     $args = array(
+//         'public' => true,
+//         'has_archive' => true,
+//         'label' => 'Article',
+//         'show_in_rest' => true,
+//         'supports' => array('title','editor','author','excerpt','comments','revisions', 'thumbnail'),
+//         'template' => array(
+//             // array( 'core/heading', array(
+//             //     'placeholder' => 'Insert Date/Author',
+//             //     'align' => 'center'
+//             // ) ),
+//             // array( 'core/image', array(
+//             //     'align' => 'center',
+//             // ) ),
+//             array( 'core/paragraph', array(
+//                 'placeholder' => 'Add Article Text...',
+//             ) ),
+//         )
+//     );
+//     register_post_type('article', $args);
+// }
+// add_action( 'init', 'hawkseye_register_posts');
     
