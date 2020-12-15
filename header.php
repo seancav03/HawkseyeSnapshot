@@ -102,11 +102,11 @@
                         <?php
                             wp_nav_menu(
                                 array(
-                                    'menu' => 'primary right header',
+                                    'menu' => 'right-header',
                                     'menu_class' => 'main-header-menu',
                                     'container' => '',
                                     'container_class' => '',
-                                    'theme_location' => 'primary'
+                                    'theme_location' => 'right-header'
                                 )
                             );
                         ?>

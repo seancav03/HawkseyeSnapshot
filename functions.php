@@ -16,7 +16,8 @@ function hawkseye_setup_menus() {
 
     $locations = array(
         'primary' => 'primary header items',
-        'footer' => 'footer menu items'
+        'footer' => 'footer menu items',
+        'right-header' => 'primary right header'
     );
     register_nav_menus($locations);
 }
