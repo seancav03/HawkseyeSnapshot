@@ -3,11 +3,11 @@
 
 <div class="container">
   <div class="world-news">
-
     <?php
       //Query for posts. Replace 'any' with post type name to specialize 
       $argsSticky = array (
           'post_type' => 'post',
+          'cat' => get_query_var('cat'),
           'post__in' => get_option('sticky_posts')
       );
       $the_querySticky = new WP_Query($argsSticky);
@@ -70,6 +70,7 @@
       // Query for posts. Replace 'any' with post type name to specialize 
       $args = array (
           'post_type' => 'post',
+          'cat' => get_query_var('cat'),
           'post__not_in' => get_option("sticky_posts")
       );
       $the_query = new WP_Query($args);
