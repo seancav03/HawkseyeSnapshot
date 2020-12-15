@@ -7,7 +7,7 @@
     <?php
       //Query for posts. Replace 'any' with post type name to specialize 
       $argsSticky = array (
-          'post_type' => 'any',
+          'post_type' => 'post',
           'category_name' => 'sports',
           'post__in' => get_option('sticky_posts')
       );
@@ -70,7 +70,7 @@
       <?php
       // Query for posts. Replace 'any' with post type name to specialize 
       $args = array (
-          'post_type' => 'any',
+          'post_type' => 'post',
           'category_name' => 'sports',
           'post__not_in' => get_option("sticky_posts")
       );
