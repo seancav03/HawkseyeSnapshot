@@ -10169,14 +10169,22 @@ h6, .h6 {
 }
 
 .navbar-top {
-  padding: 32px 0;
+  padding-top: 32px;
   border-bottom: 1px solid #dbdbdb;
 }
 
 .navbar-left, .navbar-right {
   display: flex;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
+}
+
+.navbar-left{
+  padding-right: 128px
+}
+.navbar-right{
+  padding-left: 128px;
+  padding-right: 128px;
 }
 
 .navbar-left li, .navbar-right li {
@@ -10197,7 +10205,7 @@ h6, .h6 {
   }
 }
 
-.navbar-right li {
+/* .navbar-right li {
   list-style: none;
   padding-right: 0;
 }
@@ -10211,7 +10219,7 @@ h6, .h6 {
 
 .navbar-right li:last-child a {
   border-right: none;
-}
+} */
 
 .social-media {
   display: flex;
@@ -10237,6 +10245,8 @@ h6, .h6 {
 }
 
 .navbar-bottom-menu {
+  padding-bottom: 16px;
+  padding-top: 16px;
   border-bottom: 1px solid #dbdbdb;
 }
 

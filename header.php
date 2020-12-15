@@ -11,22 +11,16 @@
     <div class="container-scroller">
         <div class="main-panel">
         <header id="header">
-            <div class="container">
+            <div id="headercontainer" class="container">
             <!-- partial:partials/_navbar.html -->
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="d-flex justify-content-between align-items-center navbar-top">
+                <!--
                 <ul class="navbar-left">
                     <li><?php echo date('l jS \of F Y');?></li>
                 </ul>
-                <div>
-                    <a class="navbar-brand" href="<?php echo get_home_url();?>">
-                        <?php
-                            $custom_logo_id = get_theme_mod('custom_logo');
-                            $logo = wp_get_attachment_image_src($custom_logo_id);
-                        ?>
-                        <img src="<?php echo $logo[0];?>" alt="" height="100" width="auto">
-                    </a>
-                </div>
+                -->
+                <!--
                 <div class="d-flex">
                     <ul class="social-media">
                     <li>
@@ -56,6 +50,7 @@
                     </li>
                     </ul>
                 </div>
+                -->
                 </div>
                 <div class="navbar-bottom-menu">
                 <button
@@ -70,7 +65,17 @@
 
                 <div class="navbar-collapse justify-content-center collapse" 
                 id="navbarSupportedContent">
-                    <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
+                    <!-- <ul class="navbar-nav d-lg-flex justify-content-between align-items-center"> -->
+                    <ul class="navbar-left justify-content-left">
+                        <li>
+                        <a class="navbar-brand" href="<?php echo get_home_url();?>">
+                            <?php
+                            $custom_logo_id = get_theme_mod('custom_logo');
+                            $logo = wp_get_attachment_image_src($custom_logo_id);
+                            ?>
+                            <img id="logoheader" class="disappear" src="<?php echo $logo[0];?>" alt="" height="30" width="auto">
+                        </a>
+                        </li>
                         <li>
                             <button class="navbar-close">
                             <i class="mdi mdi-close"></i>
@@ -88,14 +93,62 @@
                                 )
                             );
                         ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="mdi mdi-magnify"></i></a>
+                        <li>
+                        </ul>
+                        <img id="logowordsheader" class="disappear" src="<?php echo get_template_directory_uri()?>/assets/images/logowords.png">
+                        <ul  class="navbar-right justify-content-right">
+                        <div>
                         </li>
+                        <?php
+                            wp_nav_menu(
+                                array(
+                                    'menu' => 'primary right header',
+                                    'menu_class' => 'main-header-menu',
+                                    'container' => '',
+                                    'container_class' => '',
+                                    'theme_location' => 'primary'
+                                )
+                            );
+                        ?>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="mdi mdi-magnify"></i></a>
+                        </li> -->
                     </ul>
                 </div>
                 </div>
             </nav>
+            <div class="image_container">
+                <div class="imageOne image">
+                    <a class="navbar-brand" href="<?php echo get_home_url();?>">
+                        <?php
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id);
+                        ?>
+                        <img id="logo" src="<?php echo $logo[0];?>" alt="" height="100" width="auto">
+                    </a>
+                </div>
+                <div class="imageTwo image">
+                    <img id="logowords" class="navbar-collapse" src="<?php echo get_template_directory_uri()?>/assets/images/logowords.png" width="100" height="40">
+                </div>
+            </div>
 
             <!-- partial -->
             </div>
         </header>
+
+        <script>
+        jQuery(document).ready(function($) {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 100) { 
+                    $('#logowordsheader').removeClass('disappear');
+                    $('#logoheader').removeClass('disappear');
+                }
+                else{
+                    $('#logowordsheader').addClass('disappear');
+                    $('#logoheader').addClass('disappear');
+                }
+            });
+        });
+        </script>
+
+        <?php 
