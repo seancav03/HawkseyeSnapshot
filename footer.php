@@ -81,27 +81,27 @@
                     <h5 class="m-0 font-weight-600 mr-3 d-none d-lg-flex">Follow on</h5>
                     <ul class="social-media">
                       <li>
-                        <a href="#">
+                        <a href="https://www.instagram.com/hrshawkseye/">
                           <i class="mdi mdi-instagram"></i>
                         </a>
                       </li>
-                      <li>
+                      <!-- <li>
                         <a href="#">
                           <i class="mdi mdi-facebook"></i>
                         </a>
-                      </li>
+                      </li> -->
                       <li>
-                        <a href="#">
+                        <a href="https://www.youtube.com/user/Hrshawkseye">
                           <i class="mdi mdi-youtube"></i>
                         </a>
                       </li>
-                      <li>
+                      <!-- <li>
                         <a href="#">
                           <i class="mdi mdi-linkedin"></i>
                         </a>
-                      </li>
+                      </li> -->
                       <li>
-                        <a href="#">
+                        <a href="https://twitter.com/hrsnews">
                           <i class="mdi mdi-twitter"></i>
                         </a>
                       </li>

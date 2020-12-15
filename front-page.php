@@ -5,7 +5,9 @@
     <!-- Headeer Bar -->
     <div class="row m-3">
         <?php
-        //Query for posts. Replace 'any' with post type name to specialize 
+        //Query for the post with the specified tag. There will only be one!
+        //For each post you want to place in the header, copy this chunk
+        //  and don't forget the <?php endwhile;> at the bottom of the chunk
         $argsSticky = array (
             'post_type' => 'any',
             'tag' => 'top-banner'
